@@ -10,7 +10,6 @@
 	<modules>
 		<module>godcode-seal-annotations</module>
     <module>godcode-seal-core</module>
-    <module>godcode-seal-api</module>
   </modules>
 	<dependencies>
 			<dependency>
