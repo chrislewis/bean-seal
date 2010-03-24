@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <parent>
+    <artifactId>godcode-seal</artifactId>
+    <groupId>godcode-seal</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>godcode-seal-api</groupId>
+  <artifactId>godcode-seal-api</artifactId>
+  <name>godcode-seal-api</name>
+  <version>0.0.1-SNAPSHOT</version>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+  </dependencies>
+</project>
