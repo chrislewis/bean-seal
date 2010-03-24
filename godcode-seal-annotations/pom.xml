@@ -9,4 +9,11 @@
   <artifactId>godcode-seal-annotations</artifactId>
   <name>godcode-seal-annotations</name>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>godcode-seal</groupId>
+  		<artifactId>godcode-seal-core</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
