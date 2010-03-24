@@ -3,9 +3,9 @@ package net.godcode.seal.core;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-import net.godcode.seal.api.BeanDescriptor;
-import net.godcode.seal.api.Digester;
-import net.godcode.seal.api.Value;
+import net.godcode.seal.core.api.BeanDescriptor;
+import net.godcode.seal.core.api.Digester;
+import net.godcode.seal.core.api.Value;
 
 import org.apache.commons.codec.digest.DigestUtils;
 

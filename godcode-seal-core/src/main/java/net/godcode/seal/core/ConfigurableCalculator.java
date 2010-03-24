@@ -1,9 +1,9 @@
 package net.godcode.seal.core;
 
-import net.godcode.seal.api.Calculator;
-import net.godcode.seal.api.Digester;
-import net.godcode.seal.api.Value;
-import net.godcode.seal.api.ValueCollector;
+import net.godcode.seal.core.api.Calculator;
+import net.godcode.seal.core.api.Digester;
+import net.godcode.seal.core.api.Value;
+import net.godcode.seal.core.api.ValueCollector;
 
 /**
  * SealCalculator

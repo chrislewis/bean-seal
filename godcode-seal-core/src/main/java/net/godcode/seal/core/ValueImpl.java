@@ -1,6 +1,6 @@
 package net.godcode.seal.core;
 
-import net.godcode.seal.api.Value;
+import net.godcode.seal.core.api.Value;
 
 /**
  * SealedValueImpl

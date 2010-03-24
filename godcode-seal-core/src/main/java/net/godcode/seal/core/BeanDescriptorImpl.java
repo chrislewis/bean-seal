@@ -2,8 +2,8 @@ package net.godcode.seal.core;
 
 import java.util.Map;
 
-import net.godcode.seal.api.BeanDescriptor;
-import net.godcode.seal.api.Value;
+import net.godcode.seal.core.api.BeanDescriptor;
+import net.godcode.seal.core.api.Value;
 
 /**
  * SealedBeanDescriptorImpl

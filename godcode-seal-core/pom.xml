@@ -12,16 +12,6 @@
   <url>http://maven.apache.org</url>
   <dependencies>
   	<dependency>
-  		<groupId>godcode-seal-annotations</groupId>
-  		<artifactId>godcode-seal-annotations</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>godcode-seal-api</groupId>
-  		<artifactId>godcode-seal-api</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
-  	<dependency>
   		<groupId>commons-codec</groupId>
   		<artifactId>commons-codec</artifactId>
   		<version>1.4</version>
