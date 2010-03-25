@@ -2,10 +2,10 @@ package net.godcode.seal;
 
 import java.lang.reflect.Field;
 
+import net.godcode.seal.ValueImpl;
 import net.godcode.seal.annotations.Sealed;
-import net.godcode.seal.core.ValueImpl;
-import net.godcode.seal.core.api.Value;
-import net.godcode.seal.core.api.ValueResolver;
+import net.godcode.seal.api.Value;
+import net.godcode.seal.api.ValueResolver;
 
 /**
  * DefaultValueResolver

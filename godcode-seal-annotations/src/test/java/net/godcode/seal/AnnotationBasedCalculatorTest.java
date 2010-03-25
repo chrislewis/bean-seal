@@ -4,8 +4,8 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 import net.godcode.seal.AnnotationCalculator;
-import net.godcode.seal.core.DiscreteDigester;
-import net.godcode.seal.core.api.Value;
+import net.godcode.seal.DiscreteDigester;
+import net.godcode.seal.api.Value;
 import net.godcode.seal.test.Beans;
 
 import org.apache.commons.codec.digest.DigestUtils;

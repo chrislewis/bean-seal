@@ -2,9 +2,9 @@ package net.godcode.seal;
 
 import java.util.SortedMap;
 
-import net.godcode.seal.core.DiscreteDigester;
-import net.godcode.seal.core.api.Calculator;
-import net.godcode.seal.core.api.Value;
+import net.godcode.seal.DiscreteDigester;
+import net.godcode.seal.api.Calculator;
+import net.godcode.seal.api.Value;
 
 /**
  * DiscreteAnnotationCalculator

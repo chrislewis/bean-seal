@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.godcode.seal.annotations.Sealed;
-import net.godcode.seal.core.api.ValueLocator;
+import net.godcode.seal.api.ValueLocator;
 
 /**
  * ValueLocator

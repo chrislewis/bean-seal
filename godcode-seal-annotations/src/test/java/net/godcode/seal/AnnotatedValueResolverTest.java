@@ -3,7 +3,7 @@ package net.godcode.seal;
 import java.lang.reflect.Field;
 
 import net.godcode.seal.AnnotationValueResolver;
-import net.godcode.seal.core.api.Value;
+import net.godcode.seal.api.Value;
 import net.godcode.seal.test.Beans;
 
 import org.junit.Assert;

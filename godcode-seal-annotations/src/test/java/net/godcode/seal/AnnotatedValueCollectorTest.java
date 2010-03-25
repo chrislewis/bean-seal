@@ -2,10 +2,10 @@ package net.godcode.seal;
 
 import java.util.Map;
 
+import net.godcode.seal.CoreUtils;
 import net.godcode.seal.annotations.SealedBean;
-import net.godcode.seal.core.CoreUtils;
-import net.godcode.seal.core.api.BeanDescriptor;
-import net.godcode.seal.core.api.Value;
+import net.godcode.seal.api.BeanDescriptor;
+import net.godcode.seal.api.Value;
 import net.godcode.seal.test.Beans.Account;
 import net.godcode.seal.test.Beans.Customer;
 

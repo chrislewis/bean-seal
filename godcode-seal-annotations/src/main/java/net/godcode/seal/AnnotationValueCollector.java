@@ -4,14 +4,14 @@ import java.lang.reflect.Field;
 import java.util.Map;
 import java.util.TreeMap;
 
+import net.godcode.seal.BeanDescriptorImpl;
+import net.godcode.seal.CoreUtils;
 import net.godcode.seal.annotations.SealedBean;
-import net.godcode.seal.core.BeanDescriptorImpl;
-import net.godcode.seal.core.CoreUtils;
-import net.godcode.seal.core.api.BeanDescriptor;
-import net.godcode.seal.core.api.Value;
-import net.godcode.seal.core.api.ValueCollector;
-import net.godcode.seal.core.api.ValueLocator;
-import net.godcode.seal.core.api.ValueResolver;
+import net.godcode.seal.api.BeanDescriptor;
+import net.godcode.seal.api.Value;
+import net.godcode.seal.api.ValueCollector;
+import net.godcode.seal.api.ValueLocator;
+import net.godcode.seal.api.ValueResolver;
 
 
 /**
