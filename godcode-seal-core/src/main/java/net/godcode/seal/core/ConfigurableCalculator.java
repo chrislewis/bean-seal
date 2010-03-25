@@ -6,7 +6,7 @@ import net.godcode.seal.core.api.Value;
 import net.godcode.seal.core.api.ValueCollector;
 
 /**
- * SealCalculator
+ * ConfigurableCalculator
  * 
  * $Id$
  * 

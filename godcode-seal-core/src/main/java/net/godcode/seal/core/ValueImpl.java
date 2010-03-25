@@ -3,14 +3,14 @@ package net.godcode.seal.core;
 import net.godcode.seal.core.api.Value;
 
 /**
- * SealedValueImpl
+ * ValueImpl
  * 
  * $Id$
  * 
  * @author clewis Mar 23, 2010
  *
  */
-public class ValueImpl implements Value {
+public final class ValueImpl implements Value {
 	
 	private final String name;
 	

@@ -6,14 +6,14 @@ import net.godcode.seal.core.api.BeanDescriptor;
 import net.godcode.seal.core.api.Value;
 
 /**
- * SealedBeanDescriptorImpl
+ * BeanDescriptorImpl
  * 
  * $Id$
  * 
  * @author clewis Mar 23, 2010
  *
  */
-public class BeanDescriptorImpl<T extends Value> implements BeanDescriptor<T> {
+public final class BeanDescriptorImpl<T extends Value> implements BeanDescriptor<T> {
 	
 	private final String secret;
 	

@@ -10,8 +10,8 @@ import java.lang.reflect.Field;
  * @author clewis Mar 22, 2010
  *
  */
-public interface ValueResolver<B extends Value> {
+public interface ValueResolver<A extends Value> {
 	
-	public <A> B resolve(Field field, A source);
+	public <B> A resolve(Field field, B source);
 	
 }

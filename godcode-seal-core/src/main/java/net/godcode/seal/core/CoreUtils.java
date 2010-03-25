@@ -6,7 +6,7 @@ import net.godcode.seal.core.api.BeanDescriptor;
 import net.godcode.seal.core.api.Value;
 
 /**
- * Core
+ * CoreUtils
  * 
  * $Id$
  * 
