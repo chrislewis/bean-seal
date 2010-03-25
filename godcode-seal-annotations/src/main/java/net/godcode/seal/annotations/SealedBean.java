@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * SealedBean
+ * An annotation indicating a class whose instances should be considered sealed.
  * 
  * $Id$
  * 
@@ -17,6 +17,10 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface SealedBean {
 	
+	/**
+	 * A secret to be treated as a part of the contained sealed values when
+	 * creating a digest for an instance of the type.
+	 */
 	String secret() default "";
 	
 }

@@ -6,7 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Sealed
+ * An annotation for class fields signifying that their value should be
+ * considered sealed.
  * 
  * $Id$
  * 
@@ -17,6 +18,13 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface Sealed {
 	
+	/**
+	 * The relative property path indicating the actual value to seal.
+	 * Properties with no path will be converted via direct toString
+	 * invocation. When a path is present, it will be considered a property
+	 * on the value represented by the field, and on which toString will
+	 * be invoked.
+	 */
 	String path() default "";
 	
 }
