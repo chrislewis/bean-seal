@@ -4,7 +4,7 @@ description of their classes.
 // Assume Customer is a described class, with 'customerNo' as a @Sealed property.
 Customer c = new Customer("John", "Doe", "123-ABC");
 
-AnnotationBasedCalculator calc = new AnnotationBasedCalculator();
+DiscreteAnnotationCalculator calc = new DiscreteAnnotationCalculator();
 Map<String, String> map = calc.calculate(c);
 
 System.out.println(map);
