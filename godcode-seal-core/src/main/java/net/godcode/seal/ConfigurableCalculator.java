@@ -1,11 +1,10 @@
 package net.godcode.seal;
 
-import net.godcode.seal.api.BeanDescriptor;
+import static net.godcode.seal.f.Functions.digest;
 import net.godcode.seal.api.Calculator;
 import net.godcode.seal.api.Digester;
 import net.godcode.seal.api.Value;
 import net.godcode.seal.api.ValueCollector;
-import fj.F;
 import fj.data.Option;
 
 /**
@@ -29,12 +28,7 @@ public class ConfigurableCalculator<A extends Value, B> implements Calculator<B>
 	}
 
 	public <R> Option<B> calculate(R in) {
-		Option<BeanDescriptor<A>> desc = collector.collect(in);
-		return desc.bind(new F<BeanDescriptor<A>, Option<B>>() {
-			public Option<B> f(BeanDescriptor<A> d) {
-				return Option.some(digester.digest(d));
-			}
-		});
+		return collector.collect(in).bind(digest(this.digester));
 	}
 
 }

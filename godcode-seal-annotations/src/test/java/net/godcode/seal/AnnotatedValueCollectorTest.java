@@ -45,6 +45,8 @@ public class AnnotatedValueCollectorTest {
 	
 	@Test
 	public void test_annotated_but_empty_class_yield_empty_values_in_descriptor() {
+		System.out
+				.println("AnnotatedValueCollectorTest.test_annotated_but_empty_class_yield_empty_values_in_descriptor() " + collector.collect(new SealedEmptyAccount("123", "personal")));
 		BeanDescriptor<Value> d = collector.collect(new SealedEmptyAccount("123", "personal")).some();
 		Assert.assertTrue(d.getValues().isEmpty());
 		Assert.assertNotNull(d.getSecret());

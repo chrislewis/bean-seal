@@ -44,7 +44,7 @@ public class AnnotationValueCollector<A extends Value> implements ValueCollector
 		}
 	}
 	
-	public <B> Option<BeanDescriptor<A>> collect(B in) {
+	public <B> Option<BeanDescriptor<A>> collect(final B in) {
 		if(! in.getClass().isAnnotationPresent(SealedBean.class)) {
 			return Option.none();
 		} else {
