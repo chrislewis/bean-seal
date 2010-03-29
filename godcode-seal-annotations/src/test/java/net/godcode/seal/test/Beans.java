@@ -75,4 +75,23 @@ public class Beans {
 
 	}
 	
+	@SealedBean(secret = SECRET)
+	public static class SealedEmptyAccount {
+		private String accountNo;
+		private String name;
+
+		public SealedEmptyAccount(String accountNo, String name) {
+			this.accountNo = accountNo;
+			this.name = name;
+		}
+
+		public String getAccountNo() {
+			return accountNo;
+		}
+
+		public String getName() {
+			return name;
+		}
+	}
+	
 }

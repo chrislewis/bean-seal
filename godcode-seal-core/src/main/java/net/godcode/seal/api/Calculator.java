@@ -1,5 +1,7 @@
 package net.godcode.seal.api;
 
+import net.godcode.seal.f.Option;
+
 
 /**
  * SealCalculator
@@ -11,6 +13,6 @@ package net.godcode.seal.api;
  */
 public interface Calculator<A> {
 	
-	public <B> A calculate(B in);
+	public <B> Option<A> calculate(B in);
 	
 }

@@ -1,5 +1,7 @@
 package net.godcode.seal.api;
 
+import net.godcode.seal.f.Option;
+
 /**
  * SealedFieldCollector
  * 
@@ -10,6 +12,6 @@ package net.godcode.seal.api;
  */
 public interface ValueCollector<A extends Value> {
 	
-	public <B> BeanDescriptor<A> collect(B obj);
+	public <B> Option<BeanDescriptor<A>> collect(B obj);
 	
 }

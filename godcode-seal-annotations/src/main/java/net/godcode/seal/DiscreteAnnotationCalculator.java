@@ -2,9 +2,9 @@ package net.godcode.seal;
 
 import java.util.SortedMap;
 
-import net.godcode.seal.DiscreteDigester;
 import net.godcode.seal.api.Calculator;
 import net.godcode.seal.api.Value;
+import net.godcode.seal.f.Option;
 
 /**
  * DiscreteAnnotationCalculator
@@ -17,10 +17,10 @@ import net.godcode.seal.api.Value;
 public class DiscreteAnnotationCalculator implements Calculator<SortedMap<String, String>> {
 	
 	private final Calculator<SortedMap<String, String>> calculator =
-		new AnnotationCalculator<Value, SortedMap<String, String>>(
+		new AnnotationCalculator<SortedMap<String, String>>(
 				new DiscreteDigester<Value>());
 	
-	public <B> SortedMap<String, String> calculate(B in) {
+	public <B> Option<SortedMap<String, String>> calculate(B in) {
 		return calculator.calculate(in);
 	}
 	
