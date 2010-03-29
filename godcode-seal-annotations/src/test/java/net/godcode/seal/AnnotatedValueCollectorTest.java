@@ -5,7 +5,6 @@ import java.util.Map;
 import net.godcode.seal.annotations.SealedBean;
 import net.godcode.seal.api.BeanDescriptor;
 import net.godcode.seal.api.Value;
-import net.godcode.seal.f.Option;
 import net.godcode.seal.test.Beans.Account;
 import net.godcode.seal.test.Beans.Customer;
 import net.godcode.seal.test.Beans.SealedEmptyAccount;
@@ -41,12 +40,12 @@ public class AnnotatedValueCollectorTest {
 	
 	@Test
 	public void test_unannotated_class_yield_empty() {
-		Assert.assertEquals(Option.none(), collector.collect(account));
+		Assert.assertTrue(collector.collect(account).isNone());
 	}
 	
 	@Test
 	public void test_annotated_but_empty_class_yield_empty_values_in_descriptor() {
-		BeanDescriptor<Value> d = collector.collect(new SealedEmptyAccount("123", "personal")).get();
+		BeanDescriptor<Value> d = collector.collect(new SealedEmptyAccount("123", "personal")).some();
 		Assert.assertTrue(d.getValues().isEmpty());
 		Assert.assertNotNull(d.getSecret());
 		Assert.assertFalse("".equals(d.getSecret()));
@@ -54,12 +53,12 @@ public class AnnotatedValueCollectorTest {
 	
 	@Test
 	public void test_sealed_bean_with_specified_secret() {
-		Assert.assertEquals("shh!", collector.collect(new BeanWithSecret()).get().getSecret());
+		Assert.assertEquals("shh!", collector.collect(new BeanWithSecret()).some().getSecret());
 	}
 	
 	@Test
 	public void test_sealed_bean_yields_sealed_values() {
-		BeanDescriptor<Value> d = collector.collect(customer).get();
+		BeanDescriptor<Value> d = collector.collect(customer).some();
 		Assert.assertTrue(d.getValues().containsKey("customerNo"));
 		Assert.assertTrue(d.getValues().containsKey("account"));
 	}
@@ -72,7 +71,7 @@ public class AnnotatedValueCollectorTest {
 					.println("AnnotatedValueCollectorTest.test_sealed_bean_value_mappings() --- " + d);
 		}
 		
-		BeanDescriptor<Value> d = collector.collect(customer).get();		
+		BeanDescriptor<Value> d = collector.collect(customer).some();		
 		Map<String, Value> values = d.getValues();
 		Assert.assertEquals(customer.getCustomerNo(), values.get("customerNo").getValue());
 		Assert.assertEquals(customer.getAccount().getAccountNo(), values.get("account").getValue());

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>godcode-seal</groupId>
 	<artifactId>godcode-seal</artifactId>
@@ -9,14 +10,28 @@
 	<url>http://maven.apache.org</url>
 	<modules>
 		<module>godcode-seal-annotations</module>
-    <module>godcode-seal-core</module>
-  </modules>
-	<dependencies>
+		<module>godcode-seal-core</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
 			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.8.1</version>
+				<groupId>org.functionaljava</groupId>
+				<artifactId>fj</artifactId>
+				<version>2.19</version>
 			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.functionaljava</groupId>
+			<artifactId>fj</artifactId>
+			<version>2.19</version>
+		</dependency>
 	</dependencies>
 	<developers>
 		<developer>
@@ -49,4 +64,10 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>functional-java</id>
+			<url>http://functionaljava.googlecode.com/svn/maven</url>
+		</repository>
+	</repositories>
 </project>

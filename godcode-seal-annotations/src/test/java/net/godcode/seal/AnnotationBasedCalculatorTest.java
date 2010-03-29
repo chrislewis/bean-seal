@@ -23,7 +23,7 @@ public class AnnotationBasedCalculatorTest {
 	@Test
 	public void test_known_bean_yields_correct_digest_map() {
 		AnnotationCalculator<SortedMap<String, String>> calc = new AnnotationCalculator<SortedMap<String, String>>(new DiscreteDigester<Value>());
-		SortedMap<String, String> map = calc.calculate(Beans.CUSTOMER).get();
+		SortedMap<String, String> map = calc.calculate(Beans.CUSTOMER).some();
 		
 		TreeMap<String, String> manual = new TreeMap<String, String>();
 		manual.put("accountNo", DigestUtils.shaHex(Beans.SECRET + Beans.ACCOUNT.getAccountNo()));

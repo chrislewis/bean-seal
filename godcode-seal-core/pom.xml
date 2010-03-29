@@ -1,20 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?><project>
-  <parent>
-    <artifactId>godcode-seal</artifactId>
-    <groupId>godcode-seal</groupId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>godcode-seal</groupId>
-  <artifactId>godcode-seal-core</artifactId>
-  <name>godcode-seal-core</name>
-  <version>0.0.1-SNAPSHOT</version>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-  	<dependency>
-  		<groupId>commons-codec</groupId>
-  		<artifactId>commons-codec</artifactId>
-  		<version>1.4</version>
-  	</dependency>
-  </dependencies>
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<parent>
+		<artifactId>godcode-seal</artifactId>
+		<groupId>godcode-seal</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>godcode-seal</groupId>
+	<artifactId>godcode-seal-core</artifactId>
+	<name>godcode-seal-core</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.functionaljava</groupId>
+			<artifactId>fj</artifactId>
+		</dependency>
+	</dependencies>
 </project>

@@ -1,6 +1,7 @@
 package net.godcode.seal.api;
 
-import net.godcode.seal.f.Option;
+import fj.data.Option;
+
 
 /**
  * SealedFieldCollector

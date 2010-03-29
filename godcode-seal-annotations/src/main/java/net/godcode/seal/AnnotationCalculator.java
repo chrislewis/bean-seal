@@ -5,7 +5,8 @@ import net.godcode.seal.api.Calculator;
 import net.godcode.seal.api.Digester;
 import net.godcode.seal.api.Value;
 import net.godcode.seal.api.ValueCollector;
-import net.godcode.seal.f.Option;
+import fj.F;
+import fj.data.Option;
 
 /**
  * AnnotationBasedCalculator
@@ -28,10 +29,10 @@ public class AnnotationCalculator<A> implements Calculator<A> {
 	
 	public <U> Option<A> calculate(U in) {
 		Option<BeanDescriptor<Value>> desc = collector.collect(in);
-		if(desc.isSome())
-			return Option.some(digester.digest(desc.get()));
-		else
-			return Option.none();
-		//return digester.digest(collector.collect(in));
+		return desc.bind(new F<BeanDescriptor<Value>, Option<A>>() {
+			public Option<A> f(BeanDescriptor<Value> d) {
+				return Option.some(digester.digest(d));
+			}
+		});
 	}
 }

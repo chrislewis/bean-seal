@@ -10,7 +10,7 @@ import net.godcode.seal.api.Value;
 import net.godcode.seal.api.ValueCollector;
 import net.godcode.seal.api.ValueLocator;
 import net.godcode.seal.api.ValueResolver;
-import net.godcode.seal.f.Option;
+import fj.data.Option;
 
 
 /**
