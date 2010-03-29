@@ -3,9 +3,8 @@ package net.godcode.seal.api;
 import fj.data.Option;
 
 
-
 /**
- * SealCalculator
+ * 
  * 
  * $Id$
  * 

@@ -4,7 +4,11 @@ import fj.data.Option;
 
 
 /**
- * SealedFieldCollector
+ * A service that knows how to collect and resolve the sealed values of a
+ * sealed object. A ValueCollector is therefore responsible for creating a
+ * {@link BeanDescriptor} of a sealed object. A collector would generally
+ * employ a {@link ValueLocator} and a {@link ValueResolver} to accomplish
+ * this task.
  * 
  * $Id$
  * 

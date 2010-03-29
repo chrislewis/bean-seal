@@ -3,7 +3,9 @@ package net.godcode.seal.api;
 import java.util.Map;
 
 /**
- * SealedValue
+ * An ADT that describes the component members (and their respective values)
+ * of a sealed object. A BeanDescriptor effectively provides the ingredients
+ * for creating the digest of its associated object.
  * 
  * $Id$
  * 
