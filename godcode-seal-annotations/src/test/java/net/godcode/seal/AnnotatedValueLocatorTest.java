@@ -1,9 +1,8 @@
 package net.godcode.seal;
 
 import java.lang.reflect.Field;
-import java.util.List;
+import java.util.Collection;
 
-import net.godcode.seal.AnnotationValueLocator;
 import net.godcode.seal.test.Beans;
 
 import org.junit.Assert;
@@ -23,13 +22,13 @@ public class AnnotatedValueLocatorTest {
 	
 	@Test
 	public void test_that_locator_skips_unannotated_fields() {
-		List<Field> fields = locator.locate(Beans.ACCOUNT);
+		Collection<Field> fields = locator.locate(Beans.ACCOUNT);
 		Assert.assertTrue(fields.size() == 0);
 	}
 	
 	@Test
 	public void test_that_locator_locates_annotated_fields() {
-		List<Field> fields = locator.locate(Beans.CUSTOMER);
+		Collection<Field> fields = locator.locate(Beans.CUSTOMER);
 		Assert.assertTrue(fields.size() == 2);
 	}
 	
