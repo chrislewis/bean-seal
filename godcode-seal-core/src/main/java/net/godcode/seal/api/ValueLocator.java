@@ -1,7 +1,7 @@
 package net.godcode.seal.api;
 
 import java.lang.reflect.Field;
-import java.util.List;
+import java.util.Collection;
 
 /**
  * A ValueLocator knows how to find all of the members on an object whose
@@ -16,6 +16,6 @@ import java.util.List;
  */
 public interface ValueLocator {
 	
-	public <A> List<Field> locate(A in);
+	public <A> Collection<Field> locate(A in);
 	
 }
