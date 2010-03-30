@@ -1,13 +1,13 @@
 package net.godcode.seal;
 
-import static net.godcode.seal.AnnotationFunctions.isFieldSealed;
+import static fj.data.Array.array;
+import static net.godcode.seal.Classes.isFieldSealed;
 
 import java.lang.reflect.Field;
 import java.util.Collection;
 
 import net.godcode.seal.annotations.Sealed;
 import net.godcode.seal.api.ValueLocator;
-import fj.data.Array;
 
 /**
  * ValueLocator
@@ -20,7 +20,7 @@ import fj.data.Array;
 public class AnnotationValueLocator implements ValueLocator {
 	
 	public <V> Collection<Field> locate(V in) {
-		return Array.array(in.getClass().getDeclaredFields())
+		return array(in.getClass().getDeclaredFields())
 			.filter(isFieldSealed(Sealed.class)).toCollection();
 	}
 	

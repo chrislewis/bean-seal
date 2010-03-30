@@ -1,6 +1,6 @@
 package net.godcode.seal;
 
-import static net.godcode.seal.f.Functions.digest;
+import static net.godcode.seal.Functions.digest;
 import net.godcode.seal.api.Calculator;
 import net.godcode.seal.api.Digester;
 import net.godcode.seal.api.Value;

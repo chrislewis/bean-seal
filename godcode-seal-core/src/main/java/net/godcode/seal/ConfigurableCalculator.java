@@ -1,6 +1,6 @@
 package net.godcode.seal;
 
-import static net.godcode.seal.f.Functions.digest;
+import static net.godcode.seal.Functions.digest;
 import net.godcode.seal.api.Calculator;
 import net.godcode.seal.api.Digester;
 import net.godcode.seal.api.Value;
@@ -28,7 +28,7 @@ public class ConfigurableCalculator<A extends Value, B> implements Calculator<B>
 	}
 
 	public <R> Option<B> calculate(R in) {
-		return collector.collect(in).bind(digest(this.digester));
+		return collector.collect(in).bind(digest(digester));
 	}
 
 }

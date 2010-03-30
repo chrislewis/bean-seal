@@ -67,12 +67,6 @@ public class AnnotatedValueCollectorTest {
 	
 	@Test
 	public void test_sealed_bean_value_mappings() {
-		
-		for(BeanDescriptor<Value> d : collector.collect2(customer)) {
-			System.out
-					.println("AnnotatedValueCollectorTest.test_sealed_bean_value_mappings() --- " + d);
-		}
-		
 		BeanDescriptor<Value> d = collector.collect(customer).some();		
 		Map<String, Value> values = d.getValues();
 		Assert.assertEquals(customer.getCustomerNo(), values.get("customerNo").getValue());

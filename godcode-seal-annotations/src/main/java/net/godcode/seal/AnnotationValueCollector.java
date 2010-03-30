@@ -36,14 +36,6 @@ public class AnnotationValueCollector<A extends Value> implements ValueCollector
 		this.locator = locator;
 	}
 	
-	public <V> Iterable<BeanDescriptor<A>> collect2(V in) {
-		if(! in.getClass().isAnnotationPresent(SealedBean.class)) {
-			return Option.none();
-		} else {
-			return collect(in);
-		}
-	}
-	
 	public <B> Option<BeanDescriptor<A>> collect(final B in) {
 		if(! in.getClass().isAnnotationPresent(SealedBean.class)) {
 			return Option.none();
