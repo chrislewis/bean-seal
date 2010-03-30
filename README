@@ -5,7 +5,7 @@ description of their classes.
 Customer c = new Customer("John", "Doe", "123-ABC");
 
 DiscreteAnnotationCalculator calc = new DiscreteAnnotationCalculator();
-Map<String, String> map = calc.calculate(c);
+Option<Map<String, String>> map = calc.calculate(c);
 
-System.out.println(map);
+System.out.println(map.some());
 // Output: {customerNo=682f6a9cf68c60e947f00be8007abf5857ac9e70}
