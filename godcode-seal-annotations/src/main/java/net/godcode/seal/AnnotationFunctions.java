@@ -1,8 +1,7 @@
 package net.godcode.seal;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-
-import net.godcode.seal.annotations.Sealed;
 
 import fj.F;
 
@@ -16,10 +15,12 @@ import fj.F;
  */
 public class AnnotationFunctions {
 	
-	public static final F<Field, Boolean> isFieldSealed = new F<Field, Boolean>() {
-		public Boolean f(Field f) {
-			return f.isAnnotationPresent(Sealed.class);
-		}
-	};
+	public static F<Field, Boolean> isFieldSealed(final Class<? extends Annotation> a) {
+		return new F<Field, Boolean>() {
+			public Boolean f(Field f) {
+				return f.isAnnotationPresent(a);
+			}
+		};
+	}
 	
 }
