@@ -15,7 +15,7 @@ import fj.data.Option;
  * @author clewis Mar 23, 2010
  *
  */
-public class AnnotationCalculator<A> implements Calculator<A> {
+public final class AnnotationCalculator<A> implements Calculator<A> {
 	
 	private final ValueCollector<Value> collector = 
 		new AnnotationValueCollector<Value>(new AnnotationValueResolver(), new AnnotationValueLocator());

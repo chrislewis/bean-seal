@@ -14,7 +14,7 @@ import fj.data.Option;
  * @author clewis Mar 24, 2010
  *
  */
-public class DiscreteAnnotationCalculator implements Calculator<SortedMap<String, String>> {
+public final class DiscreteAnnotationCalculator implements Calculator<SortedMap<String, String>> {
 	
 	private final Calculator<SortedMap<String, String>> calculator =
 		new AnnotationCalculator<SortedMap<String, String>>(

@@ -1,5 +1,6 @@
 package net.godcode.seal;
 
+import java.util.Collections;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -27,7 +28,7 @@ public class DiscreteDigester<A extends Value> implements Digester<A, SortedMap<
 			String hash = DigestUtils.shaHex(descriptor.getSecret() + sv.getValue());
 			map.put(sv.getName(), hash);
 		}
-		return map;
+		return Collections.unmodifiableSortedMap(map);
 	}
 	
 }

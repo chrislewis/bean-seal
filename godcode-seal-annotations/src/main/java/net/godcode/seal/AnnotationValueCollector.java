@@ -1,6 +1,7 @@
 package net.godcode.seal;
 
 import java.lang.reflect.Field;
+import java.util.Collections;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -21,7 +22,7 @@ import fj.data.Option;
  * @author clewis Mar 17, 2010
  *
  */
-public class AnnotationValueCollector<A extends Value> implements ValueCollector<A> {
+class AnnotationValueCollector<A extends Value> implements ValueCollector<A> {
 	
 	private final ValueResolver<A> resolver;
 	
@@ -46,7 +47,8 @@ public class AnnotationValueCollector<A extends Value> implements ValueCollector
 			}
 			
 			SealedBean sb = in.getClass().getAnnotation(SealedBean.class);
-			BeanDescriptor<A> d = new BeanDescriptorImpl<A>(sb.secret(), values);
+			BeanDescriptor<A> d = new BeanDescriptorImpl<A>(sb.secret(),
+					Collections.unmodifiableMap(values));
 			return Option.some(d);
 		}
 	}

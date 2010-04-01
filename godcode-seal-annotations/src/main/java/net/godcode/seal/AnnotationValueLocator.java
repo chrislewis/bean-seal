@@ -10,14 +10,14 @@ import net.godcode.seal.annotations.Sealed;
 import net.godcode.seal.api.ValueLocator;
 
 /**
- * ValueLocator
+ * AnnotationValueLocator
  * 
  * $Id$
  * 
  * @author clewis Mar 23, 2010
  *
  */
-public class AnnotationValueLocator implements ValueLocator {
+class AnnotationValueLocator implements ValueLocator {
 	
 	public <V> Collection<Field> locate(V in) {
 		return array(in.getClass().getDeclaredFields())

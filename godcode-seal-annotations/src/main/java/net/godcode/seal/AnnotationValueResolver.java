@@ -2,20 +2,19 @@ package net.godcode.seal;
 
 import java.lang.reflect.Field;
 
-import net.godcode.seal.ValueImpl;
 import net.godcode.seal.annotations.Sealed;
 import net.godcode.seal.api.Value;
 import net.godcode.seal.api.ValueResolver;
 
 /**
- * DefaultValueResolver
+ * AnnotationValueResolver
  * 
  * $Id$
  * 
  * @author clewis Mar 22, 2010
  *
  */
-public class AnnotationValueResolver implements ValueResolver<Value> {
+class AnnotationValueResolver implements ValueResolver<Value> {
 	
 	public <V> Value resolve(Field field, V source) {
 		try {
