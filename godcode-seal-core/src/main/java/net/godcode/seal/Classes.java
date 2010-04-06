@@ -1,7 +1,7 @@
 package net.godcode.seal;
 
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
+import java.lang.reflect.AccessibleObject;
 
 import fj.F;
 
@@ -17,10 +17,10 @@ class Classes {
 	
 	private Classes() {}
 	
-	public static F<Field, Boolean> isFieldSealed(final Class<? extends Annotation> a) {
-		return new F<Field, Boolean>() {
-			public Boolean f(Field f) {
-				return f.isAnnotationPresent(a);
+	public static <A extends AccessibleObject> F<A, Boolean> hasAnnotation(final Class<? extends Annotation> a) {
+		return new F<A, Boolean>() {
+			public Boolean f(A ao) {
+				return ao.isAnnotationPresent(a);
 			}
 		};
 	}
