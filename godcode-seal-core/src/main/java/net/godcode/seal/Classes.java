@@ -15,6 +15,8 @@ import fj.F;
  */
 class Classes {
 	
+	private Classes() {}
+	
 	public static F<Field, Boolean> isFieldSealed(final Class<? extends Annotation> a) {
 		return new F<Field, Boolean>() {
 			public Boolean f(Field f) {

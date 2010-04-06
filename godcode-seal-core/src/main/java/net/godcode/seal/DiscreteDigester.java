@@ -12,15 +12,15 @@ import org.apache.commons.codec.digest.DigestUtils;
 
 
 /**
- * A DiscreteDigester generates a SortedMap or property names to their digests,
- * given a BeanDescriptor.
+ * A DiscreteDigester generates a SortedMap of property names to their digests,
+ * given a BeanDescriptor<A>.
  * 
  * $Id$
  * 
  * @author clewis Mar 23, 2010
  *
  */
-public class DiscreteDigester<A extends Value> implements Digester<A, SortedMap<String, String>> {
+public final class DiscreteDigester<A extends Value> implements Digester<A, SortedMap<String, String>> {
 
 	public SortedMap<String, String> digest(BeanDescriptor<A> descriptor) {
 		SortedMap<String, String> map = new TreeMap<String, String>();

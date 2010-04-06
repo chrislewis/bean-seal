@@ -17,6 +17,8 @@ import fj.data.Option;
  */
 class Functions {
 	
+	private Functions() {}
+	
 	public static <A extends Value, B> F<BeanDescriptor<A>, Option<B>> digest(final Digester<A, B> digester) {
 		return new F<BeanDescriptor<A>, Option<B>>() {
 			public Option<B> f(BeanDescriptor<A> d) {
