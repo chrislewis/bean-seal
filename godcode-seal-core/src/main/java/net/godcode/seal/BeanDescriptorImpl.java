@@ -13,13 +13,13 @@ import net.godcode.seal.api.Value;
  * @author clewis Mar 23, 2010
  *
  */
-public final class BeanDescriptorImpl<T extends Value> implements BeanDescriptor<T> {
+public final class BeanDescriptorImpl<A extends Value> implements BeanDescriptor<A> {
 	
 	private final String secret;
 	
-	private final Map<String, T> values;
+	private final Map<String, A> values;
 	
-	public BeanDescriptorImpl(String secret, Map<String, T> values) {
+	public BeanDescriptorImpl(String secret, Map<String, A> values) {
 		this.secret = secret;
 		this.values = values;
 	}
@@ -28,7 +28,7 @@ public final class BeanDescriptorImpl<T extends Value> implements BeanDescriptor
 		return secret;
 	}
 
-	public Map<String, T> getValues() {
+	public Map<String, A> getValues() {
 		return values;
 	}
 

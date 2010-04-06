@@ -23,7 +23,7 @@ public class CompositeDigester<A extends Value> implements Digester<A, String> {
 		String sum = Array.iterableArray(descriptor.getValues().values())
 		.foldLeft(new F2<String, A, String>() {
 			public String f(String r, A a) {
-				return ":" + a.getValue().toString();
+				return r + ":" + a.getValue().toString();
 			}
 		}, descriptor.getSecret());
 		return DigestUtils.shaHex(sum);
