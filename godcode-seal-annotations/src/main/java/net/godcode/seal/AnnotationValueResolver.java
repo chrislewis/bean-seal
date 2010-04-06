@@ -43,8 +43,7 @@ class AnnotationValueResolver implements ValueResolver<Value> {
 	protected <V> Object getFieldValue(Field f, V in) {
 		try {
 			f.setAccessible(true);
-			Object value = f.get(in);
-			return value == null ? "" : value;
+			return f.get(in);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
